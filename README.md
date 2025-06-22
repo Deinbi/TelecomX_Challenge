@@ -1,17 +1,67 @@
-# TelecomX_Challenge
-Analisis de datos 2025 ALURA G8
+# 📊 TelecomX Challenge — Análisis de Evasión de Clientes
+Proyecto de análisis de datos desarrollado para el programa de formación ALURA G8 (2025), orientado a identificar patrones de cancelación de clientes en una empresa de telecomunicaciones.  
+## 📁 Estructura del proyecto
 
-Telecom X - Análisis de Evasión de Clientes
+- `TelecomX_Data.json`: dataset original provisto.
+- `notebooks/`: análisis exploratorio, visualizaciones y limpieza de datos.
+- `df_limpio.csv`: dataset limpio resultante (opcional si lo exportás).
+- `visualizaciones/`: gráficos generados.
+- `README.md`: este archivo.
+## 🛠️ Tecnologías utilizadas
 
-Has sido contratado como asistente de análisis de datos en Telecom X y formarás parte del proyecto "Churn de Clientes". ***La empresa enfrenta una alta tasa de cancelaciones y necesita comprender los factores que llevan a la pérdida de clientes.***
+- Python (pandas, seaborn, matplotlib, plotly)
+- Google Colab
+- Análisis exploratorio de datos
+- Visualización de datos
+- Limpieza avanzada de datos
 
-Tu desafío será recopilar, procesar y analizar los datos, utilizando Python y sus principales bibliotecas para extraer información valiosa. A partir de tu análisis, el equipo de Data Science podrá avanzar en modelos predictivos y desarrollar estrategias para reducir la evasión.
+## 🤝 Créditos
 
-¿Qué vas a practicar?
+Desarrollado por Walter Nestor Mancuso 
+Desafío del curso de Ciencia de Datos — ALURA LATAM G8 (2025)
 
-✅ Importar y manipular datos desde una API de manera eficiente.
-✅ Aplicar los conceptos de ETL (Extracción, Transformación y Carga) en la preparación de los datos.
-✅ Crear visualizaciones estratégicas para identificar patrones y tendencias.
-✅ Realizar un Análisis Exploratorio de Datos (EDA) y generar un informe con insights relevantes.
 
-¡Ahora es tu turno! 🚀 Usa tus conocimientos para transformar datos en información estratégica y ayudar a Telecom X a retener más clientes.
+Prof. Ingrid Silva y Paz Correa
+
+![Python](https://img.shields.io/badge/python-3.10-blue.svg)
+![Pandas](https://img.shields.io/badge/pandas-1.5.3-lightgrey)
+![Status](https://img.shields.io/badge/status-en%20desarrollo-yellow)
+
+
+📄Informe
+
+Conclusiones Relevantes del Análisis
+1. Los clientes que cancelan tienen patrones distintos
+Suelen tener menos meses contratados, lo que sugiere una cancelación temprana.
+
+Tienden a tener cobros mensuales más altos, lo que puede reflejar una sensibilidad al precio.
+
+En algunos casos, tienen Gasto_Total bajo por baja permanencia, pero Cobro_Mensual elevado por costo percibido alto en poco tiempo.
+
+2. El gasto mensual y diario se relacionan con el abandono
+clientes con mayor gasto diario, muestran una leve mayor propensión al churn.
+
+Esto sugiere que una percepción de alto costo diario puede incidir en la decisión de cancelar, especialmente si no hay permanencia larga.
+
+3. El tipo de contrato es un factor determinante contratos "Month-to-month" presentan una tasa de cancelación significativamente más alta.
+Este grupo debe ser analizado o tratado como "de riesgo".
+
+4. Distribuciones numéricas muestran insights valiosos,
+Gasto_Total tiene una amplia dispersión: algunos clientes con montos muy altos (leales), otros con montos bajos (nuevos o recién cancelados).
+
+Cobro Mensual tiende a concentrarse en rangos medios-altos, pero con outliers.
+
+Meses contratados tiene acumulación en valores bajos y en máximos, indicando dos perfiles: clientes nuevos vs clientes fieles.
+
+5. Transformaciones y limpieza fueron críticas, el tratamiento de nulos,
+blancos y el renombrado de columnas fue clave para hacer el dataset interpretable y apto para análisis visual.
+
+6. A considerar, que los valores vacios como clientes_cancelados = No,
+fueron interpretados en base a que los contratos son mes a mes, por lo que en el momento del analisis, talvez no estaban activos en el momento y alternan su actividad mes a mes segun sus necesidades. Detectar y conservar registros incompletos pero valiosos (como contratos mes a mes con blancos) fue una buena decisión de negocio.
+
+7. A futuro, propongo analizar el Metodo_Pago
+(electronic check vs automático) como otra posible causa de churn.
+
+
+
+Captura de pantalla 2025-06-22 192718.png
